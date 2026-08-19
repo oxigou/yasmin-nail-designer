@@ -21,17 +21,25 @@ type PortfolioImage = {
   alt: string
 }
 
-const business = {
-  name: import.meta.env.VITE_BUSINESS_NAME ?? 'Yasmin Nail Designer',
-  subtitle:
-    import.meta.env.VITE_BUSINESS_SUBTITLE ?? 'Alongamento • Gel • Nail Art',
-  city: import.meta.env.VITE_BUSINESS_CITY ?? 'Uberlandia - MG',
-  rating: import.meta.env.VITE_BUSINESS_RATING ?? '5,0',
-  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER ?? '5534974001885',
+function envText(value: string | undefined, fallback: string) {
+  return value?.trim() || fallback
 }
 
-const schedulingUrl =
-  import.meta.env.VITE_SCHEDULING_URL ?? 'https://cal.com/marcos-nascimento-yvrlcn'
+const business = {
+  name: envText(import.meta.env.VITE_BUSINESS_NAME, 'Yasmin Nail Designer'),
+  subtitle: envText(
+    import.meta.env.VITE_BUSINESS_SUBTITLE,
+    'Alongamento • Gel • Nail Art',
+  ),
+  city: envText(import.meta.env.VITE_BUSINESS_CITY, 'Uberlandia - MG'),
+  rating: envText(import.meta.env.VITE_BUSINESS_RATING, '5,0'),
+  whatsapp: envText(import.meta.env.VITE_WHATSAPP_NUMBER, '5534974001885'),
+}
+
+const schedulingUrl = envText(
+  import.meta.env.VITE_SCHEDULING_URL,
+  'https://cal.com/marcos-nascimento-yvrlcn',
+)
 
 const services: Service[] = [
   {
@@ -221,29 +229,25 @@ function App() {
           </div>
 
           {embedUrl ? (
-            <a href={schedulingUrl} target="_blank" className="schedule-booking-card">
-              <div className="schedule-card-top">
-                <span>Agenda online</span>
-                <CalendarCheck size={22} />
-              </div>
-              <div className="schedule-card-copy">
-                <strong>Escolha seu horário</strong>
-                <small>
-                  Abra a agenda, selecione o procedimento e reserve seu momento
-                  com tranquilidade.
-                </small>
-              </div>
-              <div className="schedule-card-bottom">
-                <span>
-                  <Sparkles size={16} />
-                  Horários organizados
-                </span>
-                <em>
-                  Abrir agenda
+            <div className="schedule-embed-card">
+              <div className="schedule-embed-heading">
+                <div>
+                  <span>Agenda online</span>
+                  <strong>Escolha seu horário</strong>
+                </div>
+                <a href={schedulingUrl} target="_blank" aria-label="Abrir agenda">
                   <ExternalLink size={18} />
-                </em>
+                </a>
               </div>
-            </a>
+              <div className="schedule-frame-shell">
+                <iframe
+                  src={embedUrl}
+                  title="Agenda online"
+                  loading="lazy"
+                  className="schedule-frame"
+                />
+              </div>
+            </div>
           ) : (
             <div className="setup-card">
               <Sparkles size={28} />
