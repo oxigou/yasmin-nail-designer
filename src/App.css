@@ -125,7 +125,6 @@
 
 .trust-row,
 .hero-actions,
-.service-meta,
 .section-heading,
 .contact-band,
 .primary-link,
@@ -210,7 +209,7 @@
 
 .primary-link:focus-visible,
 .secondary-link:focus-visible,
-.service-meta a:focus-visible,
+.service-group-heading a:focus-visible,
 .schedule-booking-card:focus-visible {
   outline: 3px solid rgba(166, 79, 97, 0.28);
   outline-offset: 3px;
@@ -230,7 +229,7 @@
 
 .primary-link:hover,
 .secondary-link:hover,
-.service-meta a:hover {
+.service-group-heading a:hover {
   transform: translateY(-1px);
 }
 
@@ -341,20 +340,83 @@
   text-wrap: balance;
 }
 
-.service-grid {
+.service-catalog {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 13px;
+  gap: 18px;
+}
+
+.service-group {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 0.66fr);
+  gap: 18px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(129, 74, 103, 0.1);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 246, 250, 0.72)),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 18px 48px rgba(62, 49, 43, 0.07);
+}
+
+.service-group-heading {
+  position: sticky;
+  top: 18px;
+  display: grid;
+  gap: 18px;
+  padding: 10px 6px 6px;
+}
+
+.service-group-heading span {
+  display: block;
+  margin-bottom: 8px;
+  color: #241b1f;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-weight: 880;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.service-group-heading p {
+  max-width: 260px;
+  margin: 0;
+  color: #74676b;
+  line-height: 1.55;
+}
+
+.service-group-heading a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: #8b2f62;
+  background: #ffe4f0;
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .service-card {
   display: grid;
-  gap: 20px;
-  align-content: space-between;
-  min-height: 210px;
-  padding: 19px;
+  grid-template-columns: 82px minmax(0, 1fr);
+  grid-template-areas:
+    "image copy"
+    "image price";
+  gap: 9px 13px;
+  align-items: start;
+  min-height: 142px;
+  padding: 10px;
   border: 1px solid rgba(129, 74, 103, 0.13);
-  border-radius: 8px;
+  border-radius: 10px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 247, 251, 0.76)),
     rgba(255, 255, 255, 0.82);
@@ -372,10 +434,24 @@
   box-shadow: 0 22px 52px rgba(92, 46, 72, 0.13);
 }
 
+.service-card img {
+  grid-area: image;
+  width: 82px;
+  height: 122px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #efe5e1;
+}
+
+.service-card-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
 .service-card h3 {
   margin: 0 0 9px;
   color: #241b1f;
-  font-size: 1.04rem;
+  font-size: 0.98rem;
   line-height: 1.15;
   text-wrap: balance;
 }
@@ -390,37 +466,21 @@
 }
 
 .service-card p {
-  font-size: 0.94rem;
+  font-size: 0.88rem;
 }
 
-.service-meta {
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.service-meta strong {
-  color: #22181e;
-  font-size: 1.08rem;
-  line-height: 1.1;
-}
-
-.service-meta a {
+.service-card strong {
+  grid-area: price;
+  align-self: end;
+  width: fit-content;
   min-height: 34px;
   padding: 0 12px;
-  border-radius: 8px;
-  color: #8b2f62;
+  border-radius: 999px;
+  color: #22181e;
   background: #ffe4f0;
-  font-size: 0.88rem;
-  font-weight: 830;
+  font-size: 0.92rem;
+  font-weight: 880;
   line-height: 34px;
-  text-decoration: none;
-  transition:
-    transform 160ms ease,
-    background 160ms ease;
-}
-
-.service-meta a:hover {
-  background: #ffd3e6;
 }
 
 .booking-section {
@@ -953,8 +1013,23 @@ code {
     left: 28px;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .service-group {
+    grid-template-columns: 1fr;
+  }
+
+  .service-group-heading {
+    position: static;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    padding: 6px;
+  }
+
+  .service-group-heading p {
+    max-width: 520px;
+  }
+
+  .service-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .booking-copy {
@@ -1042,7 +1117,7 @@ code {
 
   .primary-link:hover,
   .secondary-link:hover,
-  .service-meta a:hover,
+  .service-group-heading a:hover,
   .schedule-booking-card:hover {
     transform: none;
   }
@@ -1065,7 +1140,7 @@ code {
   }
 
   .gallery-strip,
-  .service-grid {
+  .service-list {
     grid-template-columns: 1fr;
   }
 
@@ -1102,9 +1177,15 @@ code {
   }
 
   .service-card {
-    gap: 20px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 8px 12px;
     min-height: 0;
-    padding: 17px;
+    padding: 10px;
+  }
+
+  .service-card img {
+    width: 76px;
+    height: 108px;
   }
 
   .service-card:hover,
@@ -1339,8 +1420,18 @@ code {
     height: 128px;
   }
 
-  .service-meta {
-    align-items: center;
+  .service-group {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .service-group-heading {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-group-heading a {
+    width: 100%;
   }
 
   .booking-section {
@@ -1376,13 +1467,13 @@ code {
     font-size: 0.92rem;
   }
 
-  .service-meta {
-    display: grid;
-    gap: 10px;
+  .service-card {
+    grid-template-columns: 68px minmax(0, 1fr);
   }
 
-  .service-meta a {
-    text-align: center;
+  .service-card img {
+    width: 68px;
+    height: 102px;
   }
 
   .schedule-booking-card {

@@ -14,6 +14,8 @@ type Service = {
   name: string
   price: string
   description: string
+  category: 'Alongamentos' | 'Maos e pes' | 'Bem-estar'
+  image: string
 }
 
 type PortfolioImage = {
@@ -46,102 +48,180 @@ const services: Service[] = [
     name: 'Alongamento fibra de vidro',
     price: 'R$ 180',
     description: 'Qualquer formato, sem decoração e sem reconstrução.',
+    category: 'Alongamentos',
+    image:
+      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Manutenção até 30 dias',
     price: 'R$ 100',
     description: 'Manutenção do alongamento em fibra de vidro.',
+    category: 'Alongamentos',
+    image:
+      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Manutenção 31 a 34 dias',
     price: 'R$ 120',
     description: 'Manutenção do alongamento dentro do prazo estendido.',
+    category: 'Alongamentos',
+    image:
+      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Manicure tradicional',
     price: 'R$ 40',
     description: 'Cuidado tradicional para as mãos com acabamento delicado.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Pedicure tradicional',
     price: 'R$ 40',
     description: 'Cuidado tradicional para os pés com conforto.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Mão e pé tradicional',
     price: 'R$ 60',
     description: 'Manicure e pedicure tradicional no mesmo atendimento.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Manicure em gel',
     price: 'R$ 70',
     description: 'Esmaltação em gel para as mãos.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Pedicure em gel',
     price: 'R$ 70',
     description: 'Esmaltação em gel para os pés.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Mão e pé em gel',
     price: 'R$ 110',
     description: 'Manicure e pedicure com esmaltação em gel.',
+    category: 'Maos e pes',
+    image:
+      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Escalda pés terapêutico',
     price: 'R$ 80',
     description: 'Experiência relaxante com ervas medicinais e massagem.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Escalda pés + pedicure',
     price: 'R$ 110',
     description: 'Escalda pés terapêutico combinado com pedicure.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Escalda pés + pedicure + manicure',
     price: 'R$ 140',
     description: 'Atendimento completo com relaxamento, pés e mãos.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés',
     price: 'R$ 60',
     description: 'Remoção e limpeza de calosidades com cuidado e conforto.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés + pedicure',
     price: 'R$ 90',
     description: 'Spa dos pés com finalização de pedicure.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés + pedicure + manicure',
     price: 'R$ 120',
     description: 'Spa dos pés combinado com pedicure e manicure.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés + escalda pés',
     price: 'R$ 140',
     description: 'Tratamento completo de bem-estar para os pés.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés + escalda pés + pedicure',
     price: 'R$ 170',
     description: 'Spa, escalda pés e pedicure no mesmo atendimento.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Spa dos pés + escalda pés + pedicure + manicure',
     price: 'R$ 200',
     description: 'Experiência completa com spa, escalda, pés e mãos.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Adicional esmaltação em gel no spa',
     price: '+ R$ 20',
     description: 'Adicional para esmaltação em gel nos procedimentos de spa.',
+    category: 'Bem-estar',
+    image:
+      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
   },
   {
     name: 'Decorações e reconstruções',
     price: 'Sob orçamento',
     description:
       'Joias, nail arts, encapsulado e reconstruções avaliadas no agendamento.',
+    category: 'Alongamentos',
+    image:
+      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
+  },
+]
+
+const serviceGroups = [
+  {
+    title: 'Alongamentos e manutenção',
+    description: 'Estrutura, manutenção e detalhes avaliados com cuidado.',
+    category: 'Alongamentos' as const,
+  },
+  {
+    title: 'Mãos e pés',
+    description: 'Atendimentos tradicionais e em gel para uma finalização limpa.',
+    category: 'Maos e pes' as const,
+  },
+  {
+    title: 'Spa e bem-estar',
+    description: 'Combinações relaxantes para pés, mãos e autocuidado.',
+    category: 'Bem-estar' as const,
   },
 ]
 
@@ -261,22 +341,35 @@ function App() {
         <div className="section-heading">
           <Scissors size={20} />
           <div>
-            <p className="eyebrow">servicos</p>
-            <h2>Escolha o atendimento ideal</h2>
+            <p className="eyebrow">catalogo</p>
+            <h2>Procedimentos com valores</h2>
           </div>
         </div>
-        <div className="service-grid">
-          {services.map((service) => (
-            <article className="service-card" key={service.name}>
-              <div>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-              </div>
-              <div className="service-meta">
-                <strong>{service.price}</strong>
+        <div className="service-catalog">
+          {serviceGroups.map((group) => (
+            <section className="service-group" key={group.category}>
+              <div className="service-group-heading">
+                <div>
+                  <span>{group.title}</span>
+                  <p>{group.description}</p>
+                </div>
                 <a href="#agendar">Agendar</a>
               </div>
-            </article>
+              <div className="service-list">
+                {services
+                  .filter((service) => service.category === group.category)
+                  .map((service) => (
+                    <article className="service-card" key={service.name}>
+                      <img src={service.image} alt={service.name} />
+                      <div className="service-card-copy">
+                        <h3>{service.name}</h3>
+                        <p>{service.description}</p>
+                      </div>
+                      <strong>{service.price}</strong>
+                    </article>
+                  ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
@@ -393,3 +486,4 @@ function App() {
 }
 
 export default App
+
