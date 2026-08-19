@@ -1,4 +1,4 @@
-# NailFlow - GitHub Pages + Agenda
+# Yasmin Nail Designer - GitHub Pages + Agenda
 
 Site estatico para manicure/nail designer mostrar procedimentos, valores, fotos
 e permitir agendamento sem criar um servidor proprio.
@@ -61,9 +61,9 @@ npm run build
 ```bash
 git init
 git add .
-git commit -m "Initial NailFlow static site"
+git commit -m "Initial Yasmin Nail Designer static site"
 git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/nailflow.git
+git remote add origin https://github.com/SEU_USUARIO/yasmin-nail-designer.git
 git push -u origin main
 ```
 
@@ -91,7 +91,7 @@ VITE_SCHEDULING_URL
 O link final fica parecido com:
 
 ```txt
-https://SEU_USUARIO.github.io/nailflow/
+https://SEU_USUARIO.github.io/yasmin-nail-designer/
 ```
 
 ## Importante
