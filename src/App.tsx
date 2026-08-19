@@ -47,7 +47,7 @@ const business = {
   ),
   city: envText(import.meta.env.VITE_BUSINESS_CITY, 'Uberlandia - MG'),
   rating: envText(import.meta.env.VITE_BUSINESS_RATING, '5,0'),
-  whatsapp: envText(import.meta.env.VITE_WHATSAPP_NUMBER, '5534974001885'),
+  whatsapp: envText(import.meta.env.VITE_WHATSAPP_NUMBER, '553491257487'),
 }
 
 const schedulingUrl = envText(
