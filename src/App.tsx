@@ -30,7 +30,8 @@ const business = {
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER ?? '5534974001885',
 }
 
-const schedulingUrl = import.meta.env.VITE_SCHEDULING_URL ?? ''
+const schedulingUrl =
+  import.meta.env.VITE_SCHEDULING_URL ?? 'https://cal.com/marcos-nascimento-yvrlcn'
 
 const services: Service[] = [
   {

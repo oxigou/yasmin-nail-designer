@@ -39,7 +39,7 @@ jobs:
           VITE_BUSINESS_CITY: ${{ vars.VITE_BUSINESS_CITY }}
           VITE_BUSINESS_RATING: ${{ vars.VITE_BUSINESS_RATING }}
           VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
-          VITE_TALLY_FORM_URL: ${{ vars.VITE_TALLY_FORM_URL }}
+          VITE_SCHEDULING_URL: ${{ vars.VITE_SCHEDULING_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
