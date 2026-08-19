@@ -225,6 +225,19 @@ const serviceGroups = [
   },
 ]
 
+const studioSteps = [
+  'Tire suas dúvidas e compartilhe suas preferências pelo WhatsApp.',
+  'Escolha o procedimento, modelo, cores e detalhes do acabamento.',
+  'Confirme uma data e um horário disponíveis para o atendimento.',
+  'Chegue no seu momento reservado e aproveite a experiência com calma.',
+]
+
+const studioNotes = [
+  'Tolerância de até 15 minutos para atrasos.',
+  'Caso queira levar acompanhante, confirme antes pelo WhatsApp.',
+  'Joias, nail arts, encapsulados, pacotes e reconstruções são orçados no agendamento.',
+]
+
 const portfolioImages: PortfolioImage[] = [
   {
     src: 'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=84',
@@ -335,6 +348,45 @@ function App() {
           src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=500&q=82"
           alt="Nail art delicada"
         />
+      </section>
+
+      <section className="about-section" id="sobre">
+        <div className="about-intro">
+          <p className="eyebrow">sobre a designer</p>
+          <h2>Luxo, beleza e sofisticação em cada detalhe</h2>
+          <p>
+            Yasmin é especializada na criação de unhas em gel de luxo, com foco
+            em design exclusivo, acabamento impecável e alto nível de
+            sofisticação.
+          </p>
+          <p>
+            O atendimento é pensado para mulheres que buscam unhas elegantes,
+            modernas e ricamente decoradas, valorizando a estética das mãos como
+            parte essencial da imagem pessoal.
+          </p>
+        </div>
+
+        <div className="about-care">
+          <div className="care-card care-card-feature">
+            <Sparkles size={20} />
+            <span>Como iremos trabalhar</span>
+            <ol>
+              {studioSteps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="care-card care-card-notes">
+            <Heart size={20} />
+            <span>Informações importantes</span>
+            <ul>
+              {studioNotes.map((note) => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section className="services-section">
