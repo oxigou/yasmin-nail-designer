@@ -229,25 +229,29 @@ function App() {
           </div>
 
           {embedUrl ? (
-            <div className="schedule-embed-card">
-              <div className="schedule-embed-heading">
-                <div>
-                  <span>Agenda online</span>
-                  <strong>Escolha seu horário</strong>
-                </div>
-                <a href={schedulingUrl} target="_blank" aria-label="Abrir agenda">
+            <a href={schedulingUrl} target="_blank" className="schedule-booking-card">
+              <div className="schedule-card-top">
+                <span>Agenda online</span>
+                <CalendarCheck size={22} />
+              </div>
+              <div className="schedule-card-copy">
+                <strong>Escolha seu horário</strong>
+                <small>
+                  Abra a agenda oficial, selecione o procedimento e reserve seu
+                  momento com tranquilidade.
+                </small>
+              </div>
+              <div className="schedule-card-bottom">
+                <span>
+                  <Sparkles size={16} />
+                  Horários organizados
+                </span>
+                <em>
+                  Abrir agenda
                   <ExternalLink size={18} />
-                </a>
+                </em>
               </div>
-              <div className="schedule-frame-shell">
-                <iframe
-                  src={embedUrl}
-                  title="Agenda online"
-                  loading="lazy"
-                  className="schedule-frame"
-                />
-              </div>
-            </div>
+            </a>
           ) : (
             <div className="setup-card">
               <Sparkles size={28} />

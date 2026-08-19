@@ -215,8 +215,7 @@
 .primary-link:focus-visible,
 .secondary-link:focus-visible,
 .service-meta a:focus-visible,
-.schedule-booking-card:focus-visible,
-.schedule-embed-heading a:focus-visible {
+.schedule-booking-card:focus-visible {
   outline: 3px solid rgba(166, 79, 97, 0.28);
   outline-offset: 3px;
 }
@@ -753,125 +752,6 @@
   box-shadow: 0 16px 36px rgba(17, 16, 20, 0.2);
 }
 
-.schedule-embed-card {
-  position: relative;
-  display: grid;
-  min-width: 0;
-  gap: 14px;
-  min-height: 520px;
-  padding: 16px;
-  overflow: hidden;
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at 88% 10%, rgba(255, 215, 232, 0.72), transparent 9rem),
-    linear-gradient(135deg, rgba(255, 246, 250, 0.92), rgba(255, 255, 255, 0.78));
-  box-shadow:
-    0 30px 82px rgba(92, 46, 72, 0.1),
-    0 0 0 1px rgba(255, 255, 255, 0.76) inset;
-  isolation: isolate;
-}
-
-.schedule-embed-card::before,
-.schedule-embed-card::after {
-  position: absolute;
-  z-index: -1;
-  border-radius: 999px;
-  content: "";
-  pointer-events: none;
-}
-
-.schedule-embed-card::before {
-  top: 30px;
-  right: 54px;
-  width: 92px;
-  height: 92px;
-  background: rgba(215, 101, 157, 0.12);
-  box-shadow:
-    -318px 122px 0 -34px rgba(255, 215, 232, 0.54),
-    -118px 360px 0 -28px rgba(215, 101, 157, 0.1);
-}
-
-.schedule-embed-card::after {
-  right: 24px;
-  bottom: 22px;
-  width: 128px;
-  height: 128px;
-  background: rgba(255, 255, 255, 0.32);
-}
-
-.schedule-embed-heading {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  min-width: 0;
-  padding: 4px 4px 0;
-}
-
-.schedule-embed-heading div {
-  display: grid;
-  gap: 5px;
-  min-width: 0;
-}
-
-.schedule-embed-heading span {
-  color: #8b2f62;
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.schedule-embed-heading strong {
-  color: #241b1f;
-  font-size: clamp(1.45rem, 2.2vw, 2.05rem);
-  line-height: 1;
-  text-wrap: balance;
-}
-
-.schedule-embed-heading a {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  color: #8b2f62;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 14px 30px rgba(92, 46, 72, 0.1);
-  transition:
-    transform 160ms ease,
-    background 160ms ease;
-}
-
-.schedule-embed-heading a:hover {
-  transform: translateY(-1px);
-  background: #ffe4f0;
-}
-
-.schedule-frame-shell {
-  position: relative;
-  z-index: 1;
-  min-height: 438px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow:
-    0 18px 44px rgba(92, 46, 72, 0.11),
-    0 0 0 1px rgba(215, 101, 157, 0.1) inset;
-}
-
-.schedule-frame {
-  display: block;
-  width: 100%;
-  height: 438px;
-  border: 0;
-  background: #fff;
-}
-
 .setup-card {
   display: grid;
   gap: 12px;
@@ -1404,52 +1284,6 @@ code {
     min-height: 48px;
   }
 
-  .schedule-embed-card {
-    min-height: 560px;
-    gap: 12px;
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .schedule-embed-card::before {
-    top: 18px;
-    right: 18px;
-    width: 64px;
-    height: 64px;
-    box-shadow:
-      -190px 136px 0 -28px rgba(255, 215, 232, 0.42),
-      -88px 392px 0 -26px rgba(215, 101, 157, 0.1);
-  }
-
-  .schedule-embed-card::after {
-    right: -34px;
-    bottom: 54px;
-    width: 112px;
-    height: 112px;
-  }
-
-  .schedule-embed-heading {
-    padding: 2px 2px 0;
-  }
-
-  .schedule-embed-heading strong {
-    font-size: clamp(1.3rem, 7vw, 1.75rem);
-  }
-
-  .schedule-embed-heading a {
-    width: 40px;
-    height: 40px;
-  }
-
-  .schedule-frame-shell {
-    min-height: 492px;
-    border-radius: 16px;
-  }
-
-  .schedule-frame {
-    height: 492px;
-  }
-
   .primary-link,
   .secondary-link {
     width: 100%;
@@ -1567,19 +1401,6 @@ code {
   .schedule-card-top svg {
     width: 20px;
     height: 20px;
-  }
-
-  .schedule-embed-card {
-    min-height: 530px;
-    padding: 10px;
-  }
-
-  .schedule-frame-shell {
-    min-height: 466px;
-  }
-
-  .schedule-frame {
-    height: 466px;
   }
 
   .portfolio-grid {
