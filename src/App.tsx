@@ -8,7 +8,19 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react'
+import type { CSSProperties } from 'react'
 import './App.css'
+import blackAlmond from './assets/catalog/black-almond.jpg'
+import blueFrench from './assets/catalog/blue-french.jpg'
+import pedicureNude from './assets/catalog/pedicure-nude.jpg'
+import profileMain from './assets/catalog/profile-main.jpg'
+import profileSecondary from './assets/catalog/profile-secondary.jpg'
+import redAlmond from './assets/catalog/red-almond.jpg'
+import redPinkGlitter from './assets/catalog/red-pink-glitter.jpg'
+import silverFrench from './assets/catalog/silver-french.jpg'
+import turquoiseMarble from './assets/catalog/turquoise-marble.jpg'
+import whiteGold from './assets/catalog/white-gold.jpg'
+import wineElegance from './assets/catalog/wine-elegance.jpg'
 
 type Service = {
   name: string
@@ -49,56 +61,49 @@ const services: Service[] = [
     price: 'R$ 180',
     description: 'Qualquer formato, sem decoração e sem reconstrução.',
     category: 'Alongamentos',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
+    image: redPinkGlitter,
   },
   {
     name: 'Manutenção até 30 dias',
     price: 'R$ 100',
     description: 'Manutenção do alongamento em fibra de vidro.',
     category: 'Alongamentos',
-    image:
-      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
+    image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&h=460&q=82',
   },
   {
     name: 'Manutenção 31 a 34 dias',
     price: 'R$ 120',
     description: 'Manutenção do alongamento dentro do prazo estendido.',
     category: 'Alongamentos',
-    image:
-      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
+    image: silverFrench,
   },
   {
     name: 'Manicure tradicional',
     price: 'R$ 40',
     description: 'Cuidado tradicional para as mãos com acabamento delicado.',
     category: 'Maos e pes',
-    image:
-      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
+    image: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&h=460&q=82',
   },
   {
     name: 'Pedicure tradicional',
     price: 'R$ 40',
     description: 'Cuidado tradicional para os pés com conforto.',
     category: 'Maos e pes',
-    image:
-      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
+    image: pedicureNude,
   },
   {
     name: 'Mão e pé tradicional',
     price: 'R$ 60',
     description: 'Manicure e pedicure tradicional no mesmo atendimento.',
     category: 'Maos e pes',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
+    image: whiteGold,
   },
   {
     name: 'Manicure em gel',
     price: 'R$ 70',
     description: 'Esmaltação em gel para as mãos.',
     category: 'Maos e pes',
-    image:
-      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
+    image: 'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&h=460&q=82',
   },
   {
     name: 'Pedicure em gel',
@@ -106,15 +111,14 @@ const services: Service[] = [
     description: 'Esmaltação em gel para os pés.',
     category: 'Maos e pes',
     image:
-      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/8945996/pexels-photo-8945996.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Mão e pé em gel',
     price: 'R$ 110',
     description: 'Manicure e pedicure com esmaltação em gel.',
     category: 'Maos e pes',
-    image:
-      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
+    image: blueFrench,
   },
   {
     name: 'Escalda pés terapêutico',
@@ -122,7 +126,7 @@ const services: Service[] = [
     description: 'Experiência relaxante com ervas medicinais e massagem.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/15949785/pexels-photo-15949785.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Escalda pés + pedicure',
@@ -130,7 +134,7 @@ const services: Service[] = [
     description: 'Escalda pés terapêutico combinado com pedicure.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/18441299/pexels-photo-18441299/free-photo-of-beautician-working-on-pedicure.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Escalda pés + pedicure + manicure',
@@ -138,7 +142,7 @@ const services: Service[] = [
     description: 'Atendimento completo com relaxamento, pés e mãos.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/6724373/pexels-photo-6724373.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Spa dos pés',
@@ -146,7 +150,7 @@ const services: Service[] = [
     description: 'Remoção e limpeza de calosidades com cuidado e conforto.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/6663599/pexels-photo-6663599.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Spa dos pés + pedicure',
@@ -154,23 +158,21 @@ const services: Service[] = [
     description: 'Spa dos pés com finalização de pedicure.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/17056222/pexels-photo-17056222/free-photo-of-close-up-of-woman-doing-pedicure.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Spa dos pés + pedicure + manicure',
     price: 'R$ 120',
     description: 'Spa dos pés combinado com pedicure e manicure.',
     category: 'Bem-estar',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
+    image: redAlmond,
   },
   {
     name: 'Spa dos pés + escalda pés',
     price: 'R$ 140',
     description: 'Tratamento completo de bem-estar para os pés.',
     category: 'Bem-estar',
-    image:
-      'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=360&q=82',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=360&h=460&q=82',
   },
   {
     name: 'Spa dos pés + escalda pés + pedicure',
@@ -178,15 +180,14 @@ const services: Service[] = [
     description: 'Spa, escalda pés e pedicure no mesmo atendimento.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/13059141/pexels-photo-13059141.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Spa dos pés + escalda pés + pedicure + manicure',
     price: 'R$ 200',
     description: 'Experiência completa com spa, escalda, pés e mãos.',
     category: 'Bem-estar',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=360&q=82',
+    image: blackAlmond,
   },
   {
     name: 'Adicional esmaltação em gel no spa',
@@ -194,7 +195,7 @@ const services: Service[] = [
     description: 'Adicional para esmaltação em gel nos procedimentos de spa.',
     category: 'Bem-estar',
     image:
-      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=360&q=82',
+      'https://images.pexels.com/photos/17056222/pexels-photo-17056222/free-photo-of-close-up-of-woman-doing-pedicure.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=360&h=460',
   },
   {
     name: 'Decorações e reconstruções',
@@ -202,8 +203,7 @@ const services: Service[] = [
     description:
       'Joias, nail arts, encapsulado e reconstruções avaliadas no agendamento.',
     category: 'Alongamentos',
-    image:
-      'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=360&q=82',
+    image: wineElegance,
   },
 ]
 
@@ -240,28 +240,28 @@ const studioNotes = [
 
 const portfolioImages: PortfolioImage[] = [
   {
-    src: 'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=84',
-    alt: 'Unhas nude com acabamento delicado',
+    src: redPinkGlitter,
+    alt: 'Alongamento vermelho e rosa com glitter',
   },
   {
-    src: 'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=84',
-    alt: 'Esmaltacao em gel com brilho',
+    src: silverFrench,
+    alt: 'Alongamento claro com glitter prateado',
   },
   {
-    src: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=84',
-    alt: 'Nail art delicada em tons claros',
+    src: whiteGold,
+    alt: 'Unhas brancas com detalhes dourados',
   },
   {
-    src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=84',
-    alt: 'Unhas decoradas com acabamento elegante',
+    src: turquoiseMarble,
+    alt: 'Unhas turquesa com arte marmorizada',
   },
   {
-    src: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=700&q=84',
-    alt: 'Detalhe de manicure em processo',
+    src: blackAlmond,
+    alt: 'Unhas pretas em formato amendoado',
   },
   {
-    src: 'https://images.unsplash.com/photo-1599206676335-193c82b13c9e?auto=format&fit=crop&w=700&q=84',
-    alt: 'Acabamento de unhas em tom sofisticado',
+    src: wineElegance,
+    alt: 'Unhas vinho com acabamento elegante',
   },
 ]
 
@@ -291,6 +291,9 @@ function App() {
     'Oi! Quero solicitar um agendamento.',
   )}`
   const embedUrl = getSchedulingEmbedUrl(schedulingUrl)
+  const scheduleCardStyle = {
+    '--schedule-image': `url(${redAlmond})`,
+  } as CSSProperties
 
   return (
     <main className="site-shell">
@@ -325,42 +328,42 @@ function App() {
         </div>
         <div className="hero-media">
           <img
-            src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=82"
-            alt="Unhas com manicure finalizada"
+            src={profileMain}
+            alt="Yasmin Nail Designer"
           />
-          <div className="hero-stamp">
-            <Heart size={18} fill="currentColor" />
-            Atendimento com hora marcada
-          </div>
         </div>
       </section>
 
       <section className="gallery-strip" aria-label="Galeria de trabalhos">
         <img
-          src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=500&q=82"
-          alt="Unhas claras com acabamento delicado"
+          src={redPinkGlitter}
+          alt="Alongamento vermelho e rosa com glitter"
         />
         <img
-          src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=500&q=82"
-          alt="Detalhe de esmalte em gel"
+          src={blueFrench}
+          alt="Alongamento azul com francesinha decorada"
         />
         <img
-          src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=500&q=82"
-          alt="Nail art delicada"
+          src={wineElegance}
+          alt="Unhas vinho com acabamento elegante"
         />
       </section>
 
       <section className="about-section" id="sobre">
         <div className="about-intro">
+          <img
+            className="about-intro-image"
+            src={profileSecondary}
+            alt="Designer Yasmin em foto profissional"
+          />
           <p className="eyebrow">sobre a designer</p>
           <h2>Luxo, beleza e sofisticação em cada detalhe</h2>
           <p>
-            Yasmin é especializada na criação de unhas em gel de luxo, com foco
-            em design exclusivo, acabamento impecável e alto nível de
-            sofisticação.
+            Sou especializada na criação de unhas em gel de luxo, com foco em
+            design exclusivo, acabamento impecável e alto nível de sofisticação.
           </p>
           <p>
-            O atendimento é pensado para mulheres que buscam unhas elegantes,
+            Meu atendimento é pensado para mulheres que buscam unhas elegantes,
             modernas e ricamente decoradas, valorizando a estética das mãos como
             parte essencial da imagem pessoal.
           </p>
@@ -453,7 +456,12 @@ function App() {
           </div>
 
           {embedUrl ? (
-            <a href={schedulingUrl} target="_blank" className="schedule-booking-card">
+            <a
+              href={schedulingUrl}
+              target="_blank"
+              className="schedule-booking-card"
+              style={scheduleCardStyle}
+            >
               <div className="schedule-card-top">
                 <span>Agenda online</span>
                 <CalendarCheck size={22} />
