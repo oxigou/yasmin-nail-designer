@@ -43,24 +43,105 @@ const schedulingUrl = envText(
 
 const services: Service[] = [
   {
-    name: 'Alongamento',
-    price: 'R$ 150',
-    description: 'Estrutura completa, acabamento natural e maior durabilidade.',
+    name: 'Alongamento fibra de vidro',
+    price: 'R$ 180',
+    description: 'Qualquer formato, sem decoração e sem reconstrução.',
   },
   {
-    name: 'Manutencao',
+    name: 'Manutenção até 30 dias',
     price: 'R$ 100',
-    description: 'Reposicao, nivelamento e finalizacao para manter o brilho.',
+    description: 'Manutenção do alongamento em fibra de vidro.',
   },
   {
-    name: 'Banho de gel',
+    name: 'Manutenção 31 a 34 dias',
+    price: 'R$ 120',
+    description: 'Manutenção do alongamento dentro do prazo estendido.',
+  },
+  {
+    name: 'Manicure tradicional',
+    price: 'R$ 40',
+    description: 'Cuidado tradicional para as mãos com acabamento delicado.',
+  },
+  {
+    name: 'Pedicure tradicional',
+    price: 'R$ 40',
+    description: 'Cuidado tradicional para os pés com conforto.',
+  },
+  {
+    name: 'Mão e pé tradicional',
+    price: 'R$ 60',
+    description: 'Manicure e pedicure tradicional no mesmo atendimento.',
+  },
+  {
+    name: 'Manicure em gel',
+    price: 'R$ 70',
+    description: 'Esmaltação em gel para as mãos.',
+  },
+  {
+    name: 'Pedicure em gel',
+    price: 'R$ 70',
+    description: 'Esmaltação em gel para os pés.',
+  },
+  {
+    name: 'Mão e pé em gel',
+    price: 'R$ 110',
+    description: 'Manicure e pedicure com esmaltação em gel.',
+  },
+  {
+    name: 'Escalda pés terapêutico',
     price: 'R$ 80',
-    description: 'Camada protetora para unhas mais resistentes e delicadas.',
+    description: 'Experiência relaxante com ervas medicinais e massagem.',
   },
   {
-    name: 'Esmaltacao em gel',
-    price: 'R$ 50',
-    description: 'Cor intensa, secagem rapida e acabamento duradouro.',
+    name: 'Escalda pés + pedicure',
+    price: 'R$ 110',
+    description: 'Escalda pés terapêutico combinado com pedicure.',
+  },
+  {
+    name: 'Escalda pés + pedicure + manicure',
+    price: 'R$ 140',
+    description: 'Atendimento completo com relaxamento, pés e mãos.',
+  },
+  {
+    name: 'Spa dos pés',
+    price: 'R$ 60',
+    description: 'Remoção e limpeza de calosidades com cuidado e conforto.',
+  },
+  {
+    name: 'Spa dos pés + pedicure',
+    price: 'R$ 90',
+    description: 'Spa dos pés com finalização de pedicure.',
+  },
+  {
+    name: 'Spa dos pés + pedicure + manicure',
+    price: 'R$ 120',
+    description: 'Spa dos pés combinado com pedicure e manicure.',
+  },
+  {
+    name: 'Spa dos pés + escalda pés',
+    price: 'R$ 140',
+    description: 'Tratamento completo de bem-estar para os pés.',
+  },
+  {
+    name: 'Spa dos pés + escalda pés + pedicure',
+    price: 'R$ 170',
+    description: 'Spa, escalda pés e pedicure no mesmo atendimento.',
+  },
+  {
+    name: 'Spa dos pés + escalda pés + pedicure + manicure',
+    price: 'R$ 200',
+    description: 'Experiência completa com spa, escalda, pés e mãos.',
+  },
+  {
+    name: 'Adicional esmaltação em gel no spa',
+    price: '+ R$ 20',
+    description: 'Adicional para esmaltação em gel nos procedimentos de spa.',
+  },
+  {
+    name: 'Decorações e reconstruções',
+    price: 'Sob orçamento',
+    description:
+      'Joias, nail arts, encapsulado e reconstruções avaliadas no agendamento.',
   },
 ]
 
@@ -123,11 +204,9 @@ function App() {
       <section className="hero-section">
         <div className="studio-bar">
           <span>Yasmin Studio</span>
-          <span>Beauty appointments</span>
           <span>{business.city}</span>
         </div>
         <div className="hero-copy">
-          <p className="eyebrow">studio de unhas</p>
           <h1>{business.name}</h1>
           <p className="hero-subtitle">{business.subtitle}</p>
           <div className="trust-row">
@@ -223,7 +302,7 @@ function App() {
               </ol>
             </div>
             <div className="booking-mini-card">
-              <strong>Designer de Unhas Yasmin</strong>
+              <strong>Designer Yasmin</strong>
               <span>Atendimento reservado, acabamento delicado.</span>
             </div>
           </div>
