@@ -52,7 +52,7 @@ const business = {
 
 const schedulingUrl = envText(
   import.meta.env.VITE_SCHEDULING_URL,
-  'https://cal.com/marcos-nascimento-yvrlcn',
+  'https://cal.com/yasmin-santos/a',
 )
 
 const services: Service[] = [
